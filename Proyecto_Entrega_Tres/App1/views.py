@@ -62,12 +62,12 @@ def Proveedor(request):
                             # <<<<<<<<<<<< BUSQUEDA PRODUCTO >>>>>>>>>>>>>
 def BusquedaProducto(request):
      return render(request,'App1/busquedaProducto.html')
+
 def buscar(request):
      if request.GET ['cantidad']:
-        cantidad= request.GET ['cantidad']
-        cant=producto.objects.filter(cantidad_icontains=cantidad)
-
-        return render(request, 'App1/resultadobusqueda.html', {"nombre":cant, "cantidad":cantidad})
+        cantidad = request.GET ['cantidad']
+        resultado= producto.objects.filter(cantidad__icontains=cantidad)
+        return render(request, 'App1/resultadobusqueda.html', {"nombre":resultado, "cantidad": cantidad })
      else:
           respuesta= "No se encontraron datos para mostrar"
      return HttpResponse (respuesta)     

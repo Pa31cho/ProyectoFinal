@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BUSCAR</title>
+    <title>Formulario - Agregar Curso</title>
 </head>
 <body>
-     <p> Estamos buscando el: {{cantidad}}</p>
-     {% if cantidad %} 
+     <p> La cantidad del Producto: {{cantidad}}</p>
+     {% if resultado %} 
      <ul>
-     {% for curso in cursos %} 
-         <li>{{cant.nombre}}</li>
-         <li>{{cantidad.cantidad}}</li>
+     {% for cantidad in resultado %} 
+         <li> Nombre: {{resultado.nombre}}</li>
+         <li>Cantidad :{{resultado.cantidad}}</li>
      {% endfor %}
      </ul>
      {% endif %}
