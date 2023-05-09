@@ -64,10 +64,10 @@ def BusquedaProducto(request):
      return render(request,'App1/busquedaProducto.html')
 
 def buscar(request):
-     if request.GET ['cantidad']:
-        cantidad = request.GET ['cantidad']
-        resultado= producto.objects.filter(cantidad__icontains=cantidad)
-        return render(request, 'App1/resultadobusqueda.html', {"nombre":resultado, "cantidad": cantidad })
+     if request.GET ['id_cantidad']:
+        cant = request.GET ['id_cantidad']
+        resultado= producto.objects.filter(nombre__icontains=cant)
+        return render(request, 'App1/resultadobusqueda.html', {"resultado":resultado})
      else:
           respuesta= "No se encontraron datos para mostrar"
      return HttpResponse (respuesta)     

@@ -7,12 +7,13 @@
     <title>Formulario - Agregar Curso</title>
 </head>
 <body>
-     <p> La cantidad del Producto: {{cantidad}}</p>
+     <p> La cantidad del Producto: {{id_cantidad}}</p>
      {% if resultado %} 
      <ul>
-     {% for cantidad in resultado %} 
-         <li> Nombre: {{resultado.nombre}}</li>
-         <li>Cantidad :{{resultado.cantidad}}</li>
+     {% for resultado in resultado %} 
+    
+         <li> Cantidad :{{resultado.cantidad}}</li>
+         <li> Cantidad :{{resultado.nombre}}</li>
      {% endfor %}
      </ul>
      {% endif %}
