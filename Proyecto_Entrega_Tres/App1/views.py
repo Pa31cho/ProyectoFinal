@@ -62,10 +62,10 @@ def Proveedor(request):
                             # <<<<<<<<<<<< BUSQUEDA PRODUCTO >>>>>>>>>>>>>
 def BusquedaProducto(request):
      return render(request,'App1/busquedaProducto.html')
-
+#Buscador
 def buscar(request):
-     if request.GET ['id_cantidad']:
-        cant = request.GET ['id_cantidad']
+     if request.GET ['i_cantidad']:
+        cant = request.GET ['i_cantidad']
         resultado= producto.objects.filter(nombre__icontains=cant)
         return render(request, 'App1/resultadobusqueda.html', {"resultado":resultado}) # Llamo a la busqueda
      else:
