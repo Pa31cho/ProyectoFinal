@@ -67,7 +67,7 @@ def buscar(request):
      if request.GET ['id_cantidad']:
         cant = request.GET ['id_cantidad']
         resultado= producto.objects.filter(nombre__icontains=cant)
-        return render(request, 'App1/resultadobusqueda.html', {"resultado":resultado})
+        return render(request, 'App1/resultadobusqueda.html', {"resultado":resultado}) # Llamo a la busqueda
      else:
           respuesta= "No se encontraron datos para mostrar"
      return HttpResponse (respuesta)     
