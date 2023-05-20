@@ -1,6 +1,8 @@
 # TerceraEntregaPiergentili
 Tercera Entrega para Curso Python
 
+VIDEO: https://youtu.be/b7PjDJqjNZk
+
 # -------------------Web para compra de productos electronica ----------------------------
 la Web cuenta con Inicio, Producto, Cliente, Proveedor
 en cada una de ellas se pide diferentes datos para completar la base de datos.
